@@ -1,0 +1,43 @@
+# 1. 저장소 Fork
+# 2. 해당 파일 A, B 절차에 따라 수정
+# 3. 수정사항 커밋 후 푸쉬 & Enjoy!
+
+name: send-letter
+
+# A. 8~11 라인 주석 처리
+on:
+  push:
+    branches:
+      - unknown
+
+# B. 14~16 라인 주석 해제
+# on:
+#   schedule:
+#     - cron: '0 6 * * *'
+
+jobs:
+  task:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '12'
+      # C. 27~34 라인 주석 해제 (선택) - Secret 값이 등록되어있어야 합니다.
+      #        env:
+      #          NAME: ${{ secrets.NAME }}
+      #          BIRTHDAY: ${{ secrets.BIRTHDAY }}
+      #          ENTER_DATE: ${{ secrets.ENTER_DATE }}
+      #          TO: ${{ secrets.TO }}
+      #          EMAIL: ${{ secrets.EMAIL }}
+      #          PASSWORD: ${{ secrets.PASSWORD }}
+      - name: Install dependencies
+        run: npm install
+      - name: Send letters
+        run: |
+          node main.js
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
