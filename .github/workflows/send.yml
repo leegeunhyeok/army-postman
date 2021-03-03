@@ -28,6 +28,7 @@ jobs:
       #          NAME: ${{ secrets.NAME }}
       #          BIRTHDAY: ${{ secrets.BIRTHDAY }}
       #          ENTER_DATE: ${{ secrets.ENTER_DATE }}
+      #          TYPE: ${{ secrets.TYPE }}
       #          TO: ${{ secrets.TO }}
       #          EMAIL: ${{ secrets.EMAIL }}
       #          PASSWORD: ${{ secrets.PASSWORD }}

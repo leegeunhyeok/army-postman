@@ -16,6 +16,7 @@ const getDate = () => {
   const name = process.env.NAME;
   const birth = process.env.BIRTHDAY;
   const enterDate = process.env.ENTER_DATE;
+  const type = process.env.TYPE;
   const to = process.env.TO;
 
   const currDate = new Date();
@@ -31,7 +32,7 @@ const getDate = () => {
     enterDate,
     '예비군인/훈련병',
     '육군',
-    '육군훈련소-논산',
+    type,
     thecamp.SoldierRelationship.FRIEND,
   );
 

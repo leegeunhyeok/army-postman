@@ -18,6 +18,7 @@
 NAME=
 BIRTHDAY=
 ENTER_DATE=
+TYPE=
 TO=
 
 EMAIL=
@@ -28,6 +29,7 @@ PASSWORD=
   - NAME: 이름
   - BIRTHDAY: 생년월일 (예: 20000101)
   - ENTER_DATE: 입영일 (예: 20000101)
+  - TYPE: 입영부대 (예: 논산훈련소-육군) > 더캠프에 있는 텍스트와 일치하도록 작성!
   - TO: 해당 날짜까지 인편 발송
 - 더캠프 계정
   - EMAIL: 이메일
