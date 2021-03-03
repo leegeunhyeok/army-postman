@@ -41,3 +41,9 @@ PASSWORD=
 # GitHub Actions를 사용하지 않는 경우 (수동 실행)
 node app.js
 ```
+
+### Crontab
+
+```bash
+0 15 * * * node /path/to/code/main.js
+```
